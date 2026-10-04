@@ -1,0 +1,4 @@
+node_modules/
+aegis_security.db
+.env
+*.log

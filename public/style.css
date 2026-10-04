@@ -1,0 +1,115 @@
+/* ==========================================================================
+   AEGIS NATIONAL DEFENSE COMMAND CHATBOT - TACTICAL THEME STYLESHEET
+   ========================================================================== */
+
+/* Google Fonts Import: Monospace & UI Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-dark: #020617;        /* slate-950 */
+  --panel-bg: #0f172a;       /* slate-900 */
+  --accent-cyan: #06b6d4;     /* cyan-500 */
+  --accent-emerald: #10b981;  /* emerald-500 */
+  --accent-red: #ef4444;      /* red-500 */
+  --accent-amber: #f59e0b;    /* amber-500 */
+  --border-slate: #1e293b;    /* slate-800 */
+}
+
+/* Base Body Setup */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ==========================================================================
+   Custom Scrollbar
+   ========================================================================== */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   Tactical Radar & Scanline Animations
+   ========================================================================== */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+.radar-sweep {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Tactical Background Grid Overlay */
+.tactical-grid {
+  background-image: linear-gradient(to right, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ==========================================================================
+   Chat Message Bubbles & Threat Level Badges
+   ========================================================================== */
+.message-bubble-user {
+  background: rgba(8, 145, 178, 0.15);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  color: #e0f2fe;
+}
+
+.message-bubble-ai {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  color: #f1f5f9;
+}
+
+/* Dynamic Threat Badges */
+.badge-critical {
+  background-color: rgba(127, 29, 29, 0.6);
+  color: #fca5a5;
+  border: 1px solid #991b1b;
+}
+
+.badge-high {
+  background-color: rgba(120, 53, 15, 0.6);
+  color: #fcd34d;
+  border: 1px solid #92400e;
+}
+
+.badge-medium {
+  background-color: rgba(113, 63, 18, 0.6);
+  color: #fef08a;
+  border: 1px solid #854d0e;
+}
+
+.badge-normal {
+  background-color: rgba(6, 78, 59, 0.6);
+  color: #6ee7b7;
+  border: 1px solid #065f46;
+}
